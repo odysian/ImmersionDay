@@ -15,7 +15,8 @@
    - Created VPC with two subnets and associated with route tables
    - Added SG with ICMP and SSH inbound rules
    - Launched two EC2 instances in different AZs. Connected to EC2-1 and pinged EC2-2 to test connectivity.
-   - Installed tidy to make curl command output better with:
+   - Installed tidy to pretty print curl command with:
+
 ```bash
 curl -s example.com | tidy -indent -wrap 80
 ```
