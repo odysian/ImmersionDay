@@ -1,34 +1,14 @@
 # AWS Immersion Day Labs
 
-### User Data for EC2 instance web server
-```
-#!/bin/sh
-​
-#Install a LAMP stack
-dnf install -y httpd wget php-fpm php-mysqli php-json php php-devel
-dnf install -y mariadb105-server
-dnf install -y httpd php-mbstring
-​
-#Start the web server
-chkconfig httpd on
-systemctl start httpd
-​
-#Install the web pages for our lab
-if [ ! -f /var/www/html/immersion-day-app-php7.zip ]; then
-   cd /var/www/html
-   wget -O 'immersion-day-app-php7.zip' 'https://static.us-east-1.prod.workshops.aws/public/1d96a398-5c4e-4ba0-9d5a-3856f0f0759e/assets/immersion-day-app-php7.zip'
-   unzip immersion-day-app-php7.zip
-fi
-​
-#Install the AWS SDK for PHP
-if [ ! -f /var/www/html/aws.zip ]; then
-   cd /var/www/html
-   mkdir vendor
-   cd vendor
-   wget https://docs.aws.amazon.com/aws-sdk-php/v3/download/aws.zip
-   unzip aws.zip
-fi 
+#### Basic EC2 Web Server
+   - Use userdata.txt
 
-#Update existing packages
-dnf update -y
-```
+
+#### Auto Scaling with CloudFormation
+
+   - Edit template to allow t3.micro for use with free tier then set as default
+   - Create AMI from EC2 instance
+   - Setup auto scaling group using AMI for launch template, attach new SG for ASG
+   - Create new ALB with target group, attach new SG for ALB
+   - Configure inbound rules for SGs
+   - Test with DNS and CPU load generator ✅
