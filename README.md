@@ -20,3 +20,9 @@
 ```bash
 curl -s example.com | tidy -indent -wrap 80
 ```
+### Security
+##### IAM
+   - Deployed EC2 instances with tags
+   - Added IAM policy to user that allows EC2 actions for instances with dev tag
+   - Created user group with new user and attached policy to test limited permissions by attempting to stop EC2 instance without dev tag
+   - Created S3 buckets, IAM role with permissions to view one of the buckets. Assigned role to EC2 instance and tested with aws s3 ls command
