@@ -57,3 +57,8 @@ curl -s example.com | tidy -indent -wrap 80
 - Created RDS database with security group allowing EC2 web server to connect with DB
 - Stored DB login in secrets manager and attached IAM policy to web server allowing access to secret
 - Tested DB integration with web server address book application ✅
+
+## Storage
+### EFS
+- Created new VPC with two public subnets in two AZs
+- Created SGs for EC2 and EFS
