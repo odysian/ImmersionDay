@@ -39,7 +39,9 @@ curl -s example.com | tidy -indent -wrap 80
 - Created IAM Role allowing SSM to call AWS services
 - Added rule to config for desired-instance-type and set parameter to t3.micro
 - Set remediation to publish to SNS topic
-- Launched t3.small instance to test
+- Tested by launching t3.small instance
 
 ### CloudTrail
-- 
+- Launched EC2 instance and created new SNS topic & subscription
+- Created eventbridge rule that monitors EC2 instance state changes
+- Tested by stopping EC2 instance 
