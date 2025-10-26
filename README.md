@@ -45,3 +45,8 @@ curl -s example.com | tidy -indent -wrap 80
 - Launched EC2 instance and created new SNS topic & subscription
 - Created eventbridge rule that monitors EC2 instance state changes
 - Tested by stopping EC2 instance 
+
+### CloudWatch
+- Launched EC2 instance with stress tool to simulate CPU load
+- Enabled detailed monitoring on the instance and created a CloudWatch alarm that monitors CPU utilization and notifies SNS when triggered
+- Viewed the graphed CPU metric in CloudWatch to confirm usage and test alarm
