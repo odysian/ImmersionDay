@@ -95,4 +95,4 @@ curl -s example.com | tidy -indent -wrap 80
   - Two private subnets
   - NAT gateway
 - Created S3 gateway endpoint for private subnets
-- 
+- Launched EC2 web server using [`userdata_adv.txt`](userdata_adv.txt)
