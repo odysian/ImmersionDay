@@ -74,3 +74,12 @@ curl -s example.com | tidy -indent -wrap 80
 - Tested by inputting bucket name and region into web page
 - Created lifecycle policy to move noncurrent versions to standard-IA after 30 days then delete after 60 
 - Enabled versioning and tested gallery app by refreshing ✅
+
+## CloudFormation
+- Created Cloudformation template starting with 
+   - VPC: configured CIDR and DNS settings
+   - IGW: attached to VPC
+   - Subnets
+   - Route Table: associated with two subnets
+   - Security Group: Allows inbound HTTP
+   - Description & Output
