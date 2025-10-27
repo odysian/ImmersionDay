@@ -69,4 +69,8 @@ curl -s example.com | tidy -indent -wrap 80
 - Switched between instance connect tabs to test both instances had access to EFS ✅
 
 ### S3
-- 
+- Created EC2 Web host stack with CF template
+- Created S3 bucket and uploaded photos
+- Tested by inputting bucket name and region into web page
+- Created lifecycle policy to move noncurrent versions to standard-IA after 30 days then delete after 60 
+- Enabled versioning and tested gallery app by refreshing ✅
