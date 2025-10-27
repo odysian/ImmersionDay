@@ -83,3 +83,7 @@ curl -s example.com | tidy -indent -wrap 80
    - Route Table: associated with two subnets
    - Security Group: Allows inbound HTTP
    - Description & Output
+
+- Created Cloudformation template: [`sfid-cfn-ec2.yaml](sfid-cfn-ec2.yaml)
+    - EC2 web server in Lab VPC using parameters
+    - Added description and output
