@@ -67,3 +67,6 @@ curl -s example.com | tidy -indent -wrap 80
 - `cd /mnt/efs/fs1`
   `sudo touch newfile.txt` to create file in EFS
 - Switched between instance connect tabs to test both instances had access to EFS ✅
+
+### S3
+- 

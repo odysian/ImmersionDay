@@ -8,9 +8,10 @@ Parameters:
   InstanceType:
     Description: Web Host EC2 instance type
     Type: String
-    Default: t2.micro
+    Default: t3.micro
     AllowedValues:
       - t2.micro
+      - t3.micro
       - m4.large
       - m5.large
   MyVPC:
