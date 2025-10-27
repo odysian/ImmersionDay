@@ -3,7 +3,7 @@
 ### Compute
 
 ##### Basic EC2 Web Server
-- Use `userdata.txt` to create a basic EC2 web server
+- Use [`userdata.txt`](userdata.txt) to create a basic EC2 web server
 
 ##### Auto Scaling with CloudFormation
 - Edit template to allow t3.micro for use with the free tier and set it as the default
@@ -69,14 +69,14 @@ curl -s example.com | tidy -indent -wrap 80
 - Switched between instance connect tabs to test both instances had access to EFS ✅
 
 ### S3
-- Created EC2 Web host stack with CF template
+- Created EC2 Web host stack with CF template: [`S3-General-ID-Lab.yaml`](S3-General-ID-Lab.yaml)
 - Created S3 bucket and uploaded photos
 - Tested by inputting bucket name and region into web page
 - Created lifecycle policy to move noncurrent versions to standard-IA after 30 days then delete after 60 
 - Enabled versioning and tested gallery app by refreshing ✅
 
 ## CloudFormation
-- Created Cloudformation template starting with 
+- Created Cloudformation template: [`sfid-cfn-vpc.yaml`](sfid-cfn-vpc.yaml)
    - VPC: configured CIDR and DNS settings
    - IGW: attached to VPC
    - Subnets
