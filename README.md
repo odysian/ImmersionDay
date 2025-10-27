@@ -1,7 +1,6 @@
 # AWS Immersion Day Labs
 
 ### Compute
-
 ##### Basic EC2 Web Server
 - Use [`userdata.txt`](userdata.txt) to create a basic EC2 web server
 
@@ -87,3 +86,13 @@ curl -s example.com | tidy -indent -wrap 80
 - Created Cloudformation template: [`sfid-cfn-ec2.yaml](sfid-cfn-ec2.yaml)
     - EC2 web server in Lab VPC using parameters
     - Added description and output
+  
+# Advanced Labs
+## Web Application
+### VPC
+- Created VPC using wizard with:
+  - Two public subnets
+  - Two private subnets
+  - NAT gateway
+- Created S3 gateway endpoint for private subnets
+- 
