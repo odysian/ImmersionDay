@@ -64,5 +64,6 @@ curl -s example.com | tidy -indent -wrap 80
 - Created SGs for EC2 and EFS; added inbound rule to EFS SG allowing NFS to own SG
 - Created EFS in two subnets created earlier, attached EFS SG to each
 - Launched an EC2 instance in each subnet, mounted EFS, then connected to each using Instance Connect
-- `cd /mnt/efs/fs1` then `sudo touch newfile.txt` to create file in EFS
+- `cd /mnt/efs/fs1`
+  `sudo touch newfile.txt` to create file in EFS
 - Switched between instance connect tabs to test both instances had access to EFS ✅
