@@ -87,7 +87,6 @@ curl -s example.com | tidy -indent -wrap 80
     - EC2 web server in Lab VPC using parameters
     - Added description and output
   
-# Advanced Labs
 ## Web Application
 ### VPC
 - Created VPC using wizard with:
@@ -96,3 +95,10 @@ curl -s example.com | tidy -indent -wrap 80
   - NAT gateway
 - Created S3 gateway endpoint for private subnets
 - Launched EC2 web server using [`userdata_adv.txt`](userdata_adv.txt)
+- Created AMI of EC2 instance, terminated original
+- Created ALB and ASG with desired capacity of 2, max of 4. Target tracking at 30% AVG CPU
+- Test ASG by performing load test
+- In monitoring tab of ASG, EC2 tab, watched CPU utilization change 
+- Four instances deployed after 5 minutes ✅
+### Database
+- Repeated steps from earlier RDS DB section to create DB for EC2
