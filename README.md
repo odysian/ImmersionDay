@@ -102,3 +102,6 @@ curl -s example.com | tidy -indent -wrap 80
 - Four instances deployed after 5 minutes ✅
 ### Database
 - Repeated steps from earlier RDS DB section to create DB for EC2
+- Diagram made in [draw.io](https://www.drawio.com/)
+
+![WebApp Diagram](WebAppImmersion.drawio.png)
